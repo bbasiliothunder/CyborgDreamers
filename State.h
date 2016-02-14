@@ -13,9 +13,9 @@ public:
     virtual void onActivate() {}
     virtual void onDeactivate() {}
 
-    virtual void handleInput(sf::Event e) = 0;
+    virtual void handleInput(const sf::Event e) = 0;
     virtual void update(float dt) = 0;
-    virtual void draw(sf::RenderWindow& window) = 0;
+    virtual void draw(sf::RenderWindow& window) const = 0;
 };
 
 #endif // STATE_H_INCLUDED

@@ -29,7 +29,7 @@ void StateManager::pop(unsigned int lvl, std::string pass) {
     }
 }
 
-void StateManager::handleInput(sf::Event e) {
+void StateManager::handleInput(const sf::Event e) {
     if(state_stack.empty()) return;
     state_stack.back()->handleInput(e);
 }
@@ -39,7 +39,7 @@ void StateManager::update(float dt) {
     state_stack.back()->update(dt);
 }
 
-void StateManager::draw(sf::RenderWindow& window) {
+void StateManager::draw(sf::RenderWindow& window) const {
     if(state_stack.empty()) return;
     state_stack.back()->draw(window);
 }
