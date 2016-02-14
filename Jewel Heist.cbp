@@ -22,6 +22,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Runner.cpp" />
+		<Unit filename="State.h" />
+		<Unit filename="StateManager.cpp" />
+		<Unit filename="StateManager.h" />
+		<Unit filename="TestState.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
