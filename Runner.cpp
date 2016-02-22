@@ -1,16 +1,11 @@
 #include "StateManager.h"
-#include "TestState.cpp"
+#include "StateSubclass.h"
+#include <iostream>
 
 int main() {
-    int window_width = 800;
-    int window_height = 600;
-    float fps = 30.0;
-    float spf = 1.0/fps;
-
-    TestState state0;
-
     StateManager sm;
-    sm.addState();
+    GameState gs(&sm);
+    sm.addState(&gs);
     sm.push(0);
 
     sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift", sf::Style::Close);
