@@ -36,3 +36,69 @@
 	"StateManager.h"
 	<cassert>
 
+1456167187 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\gamestate.cpp
+	"StateSubclass.h"
+	"StateManager.h"
+
+1456167638 c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\statesubclass.h
+	"State.h"
+	"Button.h"
+
+1456167186 c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\state.h
+	"Universal.h"
+	<SFML/Graphics.hpp>
+
+1456148753 c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\universal.h
+
+1456148753 c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\statemanager.h
+	<vector>
+	"State.h"
+
+1456148753 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\state.cpp
+	"StateManager.h"
+	<cassert>
+
+1456148753 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\statemanager.cpp
+	"StateManager.h"
+
+1456148753 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\teststate.cpp
+	"State.h"
+	<iostream>
+
+1456167051 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\button.cpp
+	<SFML/Graphics.hpp>
+	"Button.h"
+	<stdlib.h>
+	<iostream>
+
+1456167011 c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\button.h
+	<SFML/Graphics.hpp>
+	"Vec2.h"
+
+1456167020 c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\vec2.h
+
+1456167475 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\menuscreen.cpp
+	"StateSubclass.h"
+	"StateManager.h"
+	"Button.h"
+	"Universal.h"
+	<SFML/Graphics.hpp>
+	<algorithm>
+	<iostream>
+
+1456164724 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\runner.cpp
+	"StateManager.h"
+	"StateSubclass.h"
+	<iostream>
+
+1456167679 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\splash.cpp
+	<SFML/Graphics.hpp>
+	<algorithm>
+	"StateManager.h"
+	"StateSubclass.h"
+
+1456161817 source:c:\users\lenovox230\desktop\school\college\third year\second sem\179.14b proj\vec2.cpp
+	"Vec2.h"
+	<math.h>
+	<algorithm>
+
