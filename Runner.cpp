@@ -20,10 +20,11 @@ int main() {
     {
         sf::Event e;
         while(window.pollEvent(e)) {
-            sm.handleInput(e);
+            if(e.type==sf::Event::Closed)
+                window.close();
         }
 
-        sm.handleInput(e);
+        sm.handleInput();
         sm.update(spf);
 
         window.clear(sf::Color::Black);

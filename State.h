@@ -13,7 +13,7 @@ public:
     virtual void onActivate() {}
     virtual void onDeactivate() {}
 
-    virtual void handleInput(const sf::Event e) = 0;
+    virtual void handleInput() = 0;
     virtual void update(float dt) = 0;
     virtual void draw(sf::RenderWindow& window) const = 0;
 };
