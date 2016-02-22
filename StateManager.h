@@ -13,7 +13,7 @@ public:
     void push(unsigned int id, std::string pass="");
     void pop(unsigned int lvl=1, std::string pass="");
 
-    void handleInput(const sf::Event e);
+    void handleInput();
     void update(float dt);
     void draw(sf::RenderWindow& window) const;
 };

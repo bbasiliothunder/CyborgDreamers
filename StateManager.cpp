@@ -9,8 +9,7 @@ void StateManager::push(unsigned int id, std::string pass) {
         state_stack.back()->onDeactivate();
 
     state_stack.push_back(states[id]);
-    state_stack.back()->pass(pass);
-    state_stack.back()->onActivate();
+    state_stack.back()->onActivate(pass);
 }
 
 void StateManager::pop(unsigned int lvl, std::string pass) {
@@ -24,14 +23,13 @@ void StateManager::pop(unsigned int lvl, std::string pass) {
     }
 
     if(!state_stack.empty()) {
-        state_stack.back()->pass(pass);
-        state_stack.back()->onActivate();
+        state_stack.back()->onActivate(pass);
     }
 }
 
-void StateManager::handleInput(const sf::Event e) {
+void StateManager::handleInput() {
     if(state_stack.empty()) return;
-    state_stack.back()->handleInput(e);
+    state_stack.back()->handleInput();
 }
 
 void StateManager::update(float dt) {

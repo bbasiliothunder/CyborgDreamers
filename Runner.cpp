@@ -1,29 +1,25 @@
 #include "StateManager.h"
-#include "TestState.cpp"
+#include "StateSubclass.h"
+#include <iostream>
 
 int main() {
-    int window_width = 800;
-    int window_height = 600;
-    float fps = 30.0;
-    float spf = 1.0/fps;
-
-    TestState state0;
-
     StateManager sm;
-    sm.addState(&state0);
+    GameState gs(&sm);
+    sm.addState(&gs);
     sm.push(0);
 
-    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift");
+    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift", sf::Style::Close);
     sf::Clock clock;
     float lag = 0;
     while(window.isOpen())
     {
         sf::Event e;
         while(window.pollEvent(e)) {
-            sm.handleInput(e);
+            if(e.type==sf::Event::Closed)
+                window.close();
         }
 
-        sm.handleInput(e);
+        sm.handleInput();
         sm.update(spf);
 
         window.clear(sf::Color::Black);

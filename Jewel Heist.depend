@@ -1,23 +1,38 @@
 # depslib dependency file v1.0
-1455452991 source:c:\users\aemiel\documents\github\cyborgdreamers\runner.cpp
+1456130418 source:c:\users\aemiel\documents\github\cyborgdreamers\runner.cpp
 	"StateManager.h"
-	"TestState.cpp"
+	"StateSubclass.h"
+	<iostream>
 
-1455449790 c:\users\aemiel\documents\github\cyborgdreamers\statemanager.h
+1456126944 c:\users\aemiel\documents\github\cyborgdreamers\statemanager.h
 	<vector>
 	"State.h"
 
-1455449779 c:\users\aemiel\documents\github\cyborgdreamers\state.h
+1456130504 c:\users\aemiel\documents\github\cyborgdreamers\state.h
+	"Universal.h"
 	<SFML/Graphics.hpp>
 
-1455449812 source:c:\users\aemiel\documents\github\cyborgdreamers\statemanager.cpp
+1456130534 source:c:\users\aemiel\documents\github\cyborgdreamers\statemanager.cpp
 	"StateManager.h"
 
-1455453157 source:c:\users\aemiel\documents\github\cyborgdreamers\teststate.cpp
+1456127068 source:c:\users\aemiel\documents\github\cyborgdreamers\teststate.cpp
 	"State.h"
 	<iostream>
 
-1455453066 c:\users\aemiel\documents\github\cyborgdreamers\teststate.cpp
+1456127068 c:\users\aemiel\documents\github\cyborgdreamers\teststate.cpp
 	"State.h"
 	<iostream>
+
+1456128028 c:\users\aemiel\documents\github\cyborgdreamers\universal.h
+
+1456130397 source:c:\users\aemiel\documents\github\cyborgdreamers\gamestate.cpp
+	"StateSubclass.h"
+	"StateManager.h"
+
+1456130346 c:\users\aemiel\documents\github\cyborgdreamers\statesubclass.h
+	"State.h"
+
+1456130470 source:c:\users\aemiel\documents\github\cyborgdreamers\state.cpp
+	"StateManager.h"
+	<cassert>
 

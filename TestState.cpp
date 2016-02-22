@@ -12,7 +12,7 @@ public:
         x = y = 20;
     }
 
-    void handleInput (const sf::Event e) {
+    void handleInput () {
         xDisp = yDisp = 0;
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
             yDisp -= 500;
