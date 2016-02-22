@@ -10,10 +10,10 @@ int main() {
     TestState state0;
 
     StateManager sm;
-    sm.addState(&state0);
+    sm.addState();
     sm.push(0);
 
-    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift");
+    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift", sf::Style::Close);
     sf::Clock clock;
     float lag = 0;
     while(window.isOpen())
