@@ -4,11 +4,9 @@
 
 int main() {
     StateManager sm;
-    MenuScreen ms(&sm);
-    sm.addState(&ms);
     GameState gs(&sm);
     sm.addState(&gs);
-    sm.push(1);
+    sm.push(0);
 
     sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift", sf::Style::Close);
     sf::Clock clock;
