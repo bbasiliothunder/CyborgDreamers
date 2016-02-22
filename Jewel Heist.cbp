@@ -22,11 +22,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="GameState.cpp" />
 		<Unit filename="Runner.cpp" />
+		<Unit filename="State.cpp" />
 		<Unit filename="State.h" />
 		<Unit filename="StateManager.cpp" />
 		<Unit filename="StateManager.h" />
+		<Unit filename="StateSubclass.h" />
 		<Unit filename="TestState.cpp" />
+		<Unit filename="Universal.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
