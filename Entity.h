@@ -19,8 +19,11 @@ protected:
 public:
     virtual void update(float dt) = 0;
     virtual void draw(sf::RenderWindow& window) const = 0;
-    void setDirection(Movement direction) {
-        this->direction = direction;
+    virtual sf::Vector2f getPosition() {
+        return position;
+    }
+    virtual sf::Vector2i getIndexPosition() {
+        return sf::Vector2i((int)position.x, (int)position.y);
     }
 };
 

@@ -30,7 +30,7 @@ int main() {
         if(timePassed<spf) {
             float extra = spf-timePassed;
             sf::sleep(sf::seconds(extra));
-            std::cout << extra << std::endl;
+            //std::cout << extra << std::endl;
             lag = 0;
         } else {
             lag = timePassed-spf;

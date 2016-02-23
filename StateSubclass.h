@@ -2,10 +2,12 @@
 #define STATESUBCLASS_H_INCLUDED
 #include "State.h"
 #include "EntitySubclass.h"
+#include "Map.h"
 #include <vector>
 
 class GameState: public State {
 private:
+    Map map;
     StateManager* sm;
     bool isActive;
     Character player;

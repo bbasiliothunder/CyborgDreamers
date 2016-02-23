@@ -3,7 +3,7 @@
 #include <iostream>
 
 Character::Character(): direction(Movement::STAY), position(sf::Vector2f(16, 16)), lastTic(0), spriteDir(0), spriteAction(0) {
-    spriteSheet.loadFromFile("assets/sprite/spritesheet.png");
+    spriteSheet.loadFromFile("assets/sprites/spritesheet.png");
 }
 
 void Character::setDirection(Movement m) {
@@ -22,7 +22,7 @@ void Character::setDirection(Movement m) {
     }
     lastTic = 4;
 
-    std::cout << "test: " << spriteAction << spriteDir  << std::endl;
+    //std::cout << "test: " << spriteAction << spriteDir  << std::endl;
 }
 
 void Character::update(float dt) {

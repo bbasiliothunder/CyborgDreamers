@@ -1,7 +1,7 @@
 #include "StateSubclass.h"
 #include "StateManager.h"
 
-GameState::GameState(StateManager* sm): sm(sm) {
+GameState::GameState(StateManager* sm): sm(sm), map(Map("1")) {
 
 }
 
@@ -21,5 +21,6 @@ void GameState::update(float dt) {
 }
 
 void GameState::draw(sf::RenderWindow& window) const {
+    map.draw(window);
     player.draw(window);
 }

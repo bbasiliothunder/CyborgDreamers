@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1456170143 source:c:\users\aemiel\documents\github\cyborgdreamers\runner.cpp
+1456184985 source:c:\users\aemiel\documents\github\cyborgdreamers\runner.cpp
 	"StateManager.h"
 	"StateSubclass.h"
 	<iostream>
@@ -25,27 +25,36 @@
 
 1456169464 c:\users\aemiel\documents\github\cyborgdreamers\universal.h
 
-1456178445 source:c:\users\aemiel\documents\github\cyborgdreamers\gamestate.cpp
+1456184956 source:c:\users\aemiel\documents\github\cyborgdreamers\gamestate.cpp
 	"StateSubclass.h"
 	"StateManager.h"
 
-1456172978 c:\users\aemiel\documents\github\cyborgdreamers\statesubclass.h
+1456184941 c:\users\aemiel\documents\github\cyborgdreamers\statesubclass.h
 	"State.h"
 	"EntitySubclass.h"
+	"Map.h"
 	<vector>
 
 1456169464 source:c:\users\aemiel\documents\github\cyborgdreamers\state.cpp
 	"StateManager.h"
 	<cassert>
 
-1456172889 c:\users\aemiel\documents\github\cyborgdreamers\entity.h
+1456183327 c:\users\aemiel\documents\github\cyborgdreamers\entity.h
 	<SFML/Graphics.hpp>
 
-1456178391 source:c:\users\aemiel\documents\github\cyborgdreamers\character.cpp
+1456185043 source:c:\users\aemiel\documents\github\cyborgdreamers\character.cpp
 	"EntitySubclass.h"
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1456178293 c:\users\aemiel\documents\github\cyborgdreamers\entitysubclass.h
+1456182717 c:\users\aemiel\documents\github\cyborgdreamers\entitysubclass.h
 	"Entity.h"
+
+1456184877 source:c:\users\aemiel\documents\github\cyborgdreamers\map.cpp
+	"Map.h"
+	<fstream>
+	<cctype>
+
+1456184689 c:\users\aemiel\documents\github\cyborgdreamers\map.h
+	<SFML/Graphics.hpp>
 
