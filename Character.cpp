@@ -1,8 +1,7 @@
 #include "EntitySubclass.h"
 #include <SFML/Graphics.hpp>
-#include <iostream>
 
-Character::Character(): direction(Movement::STAY), position(sf::Vector2f(16, 16)), lastTic(0), spriteDir(0), spriteAction(0) {
+Character::Character(): direction(Movement::STAY), position(sf::Vector2f(144, 144)), lastTic(0), spriteDir(0), spriteAction(0) {
     spriteSheet.loadFromFile("assets/sprites/spritesheet.png");
 }
 
@@ -11,6 +10,11 @@ void Character::setDirection(Movement m) {
     direction = m;
     spriteAction = 1;
 
+    setFace(m);
+    lastTic = 4;
+}
+
+void Character::setFace(Movement m) {
     if(m==Movement::DOWN) {
         spriteDir = 0;
     } else if(m==Movement::LEFT) {
@@ -20,9 +24,6 @@ void Character::setDirection(Movement m) {
     } else if(m==Movement::UP) {
         spriteDir = 3;
     }
-    lastTic = 4;
-
-    //std::cout << "test: " << spriteAction << spriteDir  << std::endl;
 }
 
 void Character::update(float dt) {
@@ -59,4 +60,10 @@ void Character::draw(sf::RenderWindow& window) const {
     toRender.setOrigin(16, 16);
     toRender.setPosition(position);
     window.draw(toRender);
+}
+
+sf::Vector2i Character::getIndexPosition() {
+    int x = (int)floor(position.x);
+    int y = (int)floor(position.y);
+    return sf::Vector2i(x/32, y/32);
 }

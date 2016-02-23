@@ -1,5 +1,4 @@
 #include "State.h"
-#include <iostream>
 
 class TestState: public State {
     sf::CircleShape character;
@@ -35,6 +34,5 @@ public:
 
     void draw (sf::RenderWindow& window) const {
         window.draw(character);
-        //std::cout << "Test " << std::endl;
     }
 };

@@ -1,6 +1,5 @@
 #include "StateManager.h"
 #include "StateSubclass.h"
-#include <iostream>
 
 int main() {
     StateManager sm;
@@ -30,7 +29,6 @@ int main() {
         if(timePassed<spf) {
             float extra = spf-timePassed;
             sf::sleep(sf::seconds(extra));
-            //std::cout << extra << std::endl;
             lag = 0;
         } else {
             lag = timePassed-spf;

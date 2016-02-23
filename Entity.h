@@ -19,12 +19,6 @@ protected:
 public:
     virtual void update(float dt) = 0;
     virtual void draw(sf::RenderWindow& window) const = 0;
-    virtual sf::Vector2f getPosition() {
-        return position;
-    }
-    virtual sf::Vector2i getIndexPosition() {
-        return sf::Vector2i((int)position.x, (int)position.y);
-    }
 };
 
 #endif // ENTITY_H_INCLUDED

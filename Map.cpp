@@ -1,7 +1,6 @@
 #include "Map.h"
 #include <fstream>
 #include <cctype>
-#include <iostream>
 
 Map::Map(std::string s) {
     tileTexture.loadFromFile("assets/sprites/tiles.png");
@@ -56,4 +55,8 @@ void Map::draw(sf::RenderWindow& window) const {
             }
         }
     }
+}
+
+sf::Vector2i Map::getTile(sf::Vector2i pos) {
+    return map[pos.x][pos.y];
 }

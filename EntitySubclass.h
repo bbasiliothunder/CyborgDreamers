@@ -16,6 +16,8 @@ public:
     void update(float dt);
     void draw(sf::RenderWindow& window) const;
     void setDirection(Movement m);
+    void setFace(Movement m);
+    sf::Vector2i getIndexPosition();
 };
 
 #endif // ENTITYSUBCLASS_H_INCLUDED

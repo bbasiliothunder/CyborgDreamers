@@ -9,6 +9,7 @@ private:
 public:
     Map(std::string s);
     void draw(sf::RenderWindow& window) const;
+    sf::Vector2i getTile(sf::Vector2i pos);
 };
 
 #endif // MAP_H_INCLUDED
