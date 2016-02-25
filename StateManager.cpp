@@ -27,9 +27,15 @@ void StateManager::pop(unsigned int lvl, std::string pass) {
     }
 }
 
+<<<<<<< HEAD
+void StateManager::handleInput(int u, int v) {
+    if(state_stack.empty()) return;
+    state_stack.back()->handleInput(u, v);
+=======
 void StateManager::handleInput() {
     if(state_stack.empty()) return;
     state_stack.back()->handleInput();
+>>>>>>> d2e179a5989c6296ddfd72f0f2f115c64215c0ac
 }
 
 void StateManager::update(float dt) {

@@ -18,6 +18,7 @@ public:
         isActive = false;
     }
 
+    virtual void handleInput(int u, int v) = 0;
     virtual void handleInput() = 0;
     virtual void update(float dt) = 0;
     virtual void draw(sf::RenderWindow& window) const = 0;

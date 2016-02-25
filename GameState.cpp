@@ -5,7 +5,11 @@ GameState::GameState(StateManager* sm): sm(sm), map(Map("1")) {
 
 }
 
+
+void GameState::handleInput(int u, int v) {
+=======
 void GameState::handleInput() {
+
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
         sf::Vector2i nextPos = player.getIndexPosition()+sf::Vector2i(0, -1);
         sf::Vector2i tile = map.getTile(nextPos);

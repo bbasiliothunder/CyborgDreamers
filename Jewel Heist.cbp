@@ -22,7 +22,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Button.cpp" />
+		<Unit filename="Button.h" />
+		<Unit filename="Character.cpp" />
+		<Unit filename="Entity.h" />
+		<Unit filename="EntitySubclass.h" />
 		<Unit filename="GameState.cpp" />
+		<Unit filename="Map.cpp" />
+		<Unit filename="Map.h" />
+		<Unit filename="MenuState.cpp" />
 		<Unit filename="Runner.cpp" />
 		<Unit filename="State.cpp" />
 		<Unit filename="State.h" />

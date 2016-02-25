@@ -3,6 +3,9 @@
 #include "State.h"
 #include "EntitySubclass.h"
 #include "Map.h"
+#include "Button.h"
+#include <vector>
+#include "SFML/Graphics.hpp"
 #include <vector>
 
 class GameState: public State {
@@ -13,6 +16,23 @@ private:
     Character player;
 public:
     GameState(StateManager* sm);
+    void handleInput(int u, int v);
+    void update(float dt);
+    void draw(sf::RenderWindow& window) const;
+};
+
+class MenuState: public State {
+private:
+    StateManager* sm;
+    bool isActive;
+    Button join;
+    Button host;
+    Button options;
+    int cover;
+    sf::RenderWindow window2;
+public:
+    MenuState(StateManager* sm);
+    void handleInput(int u, int v);
     void handleInput();
     void update(float dt);
     void draw(sf::RenderWindow& window) const;

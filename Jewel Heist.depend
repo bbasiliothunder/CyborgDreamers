@@ -55,3 +55,78 @@
 1456186761 c:\users\aemiel\documents\github\cyborgdreamers\map.h
 	<SFML/Graphics.hpp>
 
+<<<<<<< HEAD
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\character.cpp
+	"EntitySubclass.h"
+	<SFML/Graphics.hpp>
+
+1456188295 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\entitysubclass.h
+	"Entity.h"
+
+1456188295 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\entity.h
+	<SFML/Graphics.hpp>
+
+1456397362 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\gamestate.cpp
+	"StateSubclass.h"
+	"StateManager.h"
+
+1456397346 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\statesubclass.h
+	"State.h"
+	"EntitySubclass.h"
+	"Map.h"
+	"Button.h"
+	<vector>
+	"SFML/Graphics.hpp"
+
+1456397563 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\state.h
+	"Universal.h"
+	<SFML/Graphics.hpp>
+
+1456396145 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\universal.h
+
+1456188295 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\map.h
+	<SFML/Graphics.hpp>
+
+1456397680 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\statemanager.h
+	<vector>
+	"State.h"
+
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\map.cpp
+	"Map.h"
+	<fstream>
+	<cctype>
+
+1456397712 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\runner.cpp
+	"StateManager.h"
+	"StateSubclass.h"
+	"Universal.h"
+
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\state.cpp
+	"StateManager.h"
+	<cassert>
+
+1456397371 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\statemanager.cpp
+	"StateManager.h"
+
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\teststate.cpp
+	"State.h"
+
+1456399444 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\menustate.cpp
+	"Universal.h"
+	"StateSubclass.h"
+	"StateManager.h"
+	<iostream>
+
+1456399567 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\button.cpp
+	<SFML/Graphics.hpp>
+	"Button.h"
+	"Universal.h"
+	<stdlib.h>
+	<iostream>
+
+1456392479 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\button.h
+	<SFML/Graphics.hpp>
+	"Universal.h"
+
+=======
+>>>>>>> d2e179a5989c6296ddfd72f0f2f115c64215c0ac
