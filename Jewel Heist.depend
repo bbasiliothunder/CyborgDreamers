@@ -55,7 +55,8 @@
 1456186761 c:\users\aemiel\documents\github\cyborgdreamers\map.h
 	<SFML/Graphics.hpp>
 
-<<<<<<< HEAD
+1456186761 D
+
 1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\cyborgdreamers-master\character.cpp
 	"EntitySubclass.h"
 	<SFML/Graphics.hpp>
@@ -128,5 +129,87 @@
 	<SFML/Graphics.hpp>
 	"Universal.h"
 
-=======
->>>>>>> d2e179a5989c6296ddfd72f0f2f115c64215c0ac
+1456392479 .h"
+
+1456392479 179a5989c6296ddfd72f0f2f115c64215c0ac
+
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\character.cpp
+	"EntitySubclass.h"
+	<SFML/Graphics.hpp>
+
+1456188295 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\entitysubclass.h
+	"Entity.h"
+
+1456188295 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\entity.h
+	<SFML/Graphics.hpp>
+
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\map.cpp
+	"Map.h"
+	<fstream>
+	<cctype>
+
+1456188295 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\map.h
+	<SFML/Graphics.hpp>
+
+1456583183 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\runner.cpp
+	"StateManager.h"
+	"StateSubclass.h"
+	"Universal.h"
+
+1456583605 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\statemanager.h
+	<vector>
+	<iostream>
+	"State.h"
+
+1456583595 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\state.h
+	"Universal.h"
+	<SFML/Graphics.hpp>
+
+1456402814 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\universal.h
+
+1456584951 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\statesubclass.h
+	"State.h"
+	"EntitySubclass.h"
+	"Map.h"
+	"Button.h"
+	<vector>
+	"SFML/Graphics.hpp"
+	<vector>
+
+1456581474 c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\button.h
+	<SFML/Graphics.hpp>
+
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\state.cpp
+	"StateManager.h"
+	<cassert>
+
+1456588675 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\statemanager.cpp
+	"StateManager.h"
+
+1456188295 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\teststate.cpp
+	"State.h"
+
+1456402489 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\button.cpp
+	<SFML/Graphics.hpp>
+	"Button.h"
+	"Universal.h"
+	<stdlib.h>
+	<iostream>
+
+1456581533 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\gamestate.cpp
+	"StateSubclass.h"
+	"StateManager.h"
+
+1456402490 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\menustate.cpp
+	"Universal.h"
+	"StateSubclass.h"
+	"StateManager.h"
+	<iostream>
+
+1456585129 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\splash.cpp
+	<SFML/Graphics.hpp>
+	<algorithm>
+	<iostream>
+	"StateManager.h"
+	"StateSubclass.h"
+

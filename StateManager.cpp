@@ -5,10 +5,16 @@ void StateManager::addState(State* state) {
 }
 
 void StateManager::push(unsigned int id, std::string pass) {
+    std::cout << "push" <<std::endl;
     if(!state_stack.empty())
-        state_stack.back()->onDeactivate();
+    {
+        std::cout << "DEACTA" <<std::endl;
+       state_stack.back()->onDeactivate();
+    }
 
+    std::cout << "DEACT1" <<std::endl;
     state_stack.push_back(states[id]);
+    std::cout << "DEACT2" <<std::endl;
     state_stack.back()->onActivate(pass);
 }
 
@@ -27,15 +33,9 @@ void StateManager::pop(unsigned int lvl, std::string pass) {
     }
 }
 
-<<<<<<< HEAD
 void StateManager::handleInput(int u, int v) {
     if(state_stack.empty()) return;
     state_stack.back()->handleInput(u, v);
-=======
-void StateManager::handleInput() {
-    if(state_stack.empty()) return;
-    state_stack.back()->handleInput();
->>>>>>> d2e179a5989c6296ddfd72f0f2f115c64215c0ac
 }
 
 void StateManager::update(float dt) {

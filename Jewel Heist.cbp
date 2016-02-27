@@ -32,6 +32,7 @@
 		<Unit filename="Map.h" />
 		<Unit filename="MenuState.cpp" />
 		<Unit filename="Runner.cpp" />
+		<Unit filename="Splash.cpp" />
 		<Unit filename="State.cpp" />
 		<Unit filename="State.h" />
 		<Unit filename="StateManager.cpp" />

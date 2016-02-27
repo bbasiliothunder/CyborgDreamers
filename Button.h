@@ -2,7 +2,6 @@
 #define BUTTON_H_INCLUDED
 
 #include <SFML/Graphics.hpp>
-#include "Vec2.h"
 
 class Button
 {
@@ -17,7 +16,7 @@ private:
 public:
     Button();
     bool checkCollision(float, float);
-    void draw(sf::RenderWindow&);
+    void draw(sf::RenderWindow&) const;
     void setPosition(float, float);
     void setDimension(float, float);
     void setContent(std::string);

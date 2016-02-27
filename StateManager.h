@@ -1,6 +1,7 @@
 #ifndef STATEMANAGER_H_INCLUDED
 #define STATEMANAGER_H_INCLUDED
 #include <vector>
+#include <iostream>
 #include "State.h"
 
 class StateManager {
@@ -13,7 +14,6 @@ public:
     void push(unsigned int id, std::string pass="");
     void pop(unsigned int lvl=1, std::string pass="");
     void handleInput(int u, int v);
-    void handleInput();
     void update(float dt);
     void draw(sf::RenderWindow& window) const;
 };
