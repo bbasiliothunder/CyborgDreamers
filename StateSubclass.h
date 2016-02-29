@@ -28,6 +28,7 @@ private:
     Button join;
     Button host;
     Button options;
+    Button exit;
     int cover;
     sf::RenderWindow window2;
 public:

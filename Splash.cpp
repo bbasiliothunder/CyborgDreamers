@@ -10,8 +10,6 @@ Splash::Splash(StateManager* sm)
     isFadingIn = false;
     isOnPause = false;
     isFadingOut = false;
-    timeCount = 0;
-    logoAlpha = 0;
 }
 
 void Splash::update(float dt)
@@ -75,14 +73,14 @@ void Splash::draw(sf::RenderWindow& window) const
 
 void Splash::onActivate(std::string accept)
 {
-    std::cout << "ACTIVE" <<std::endl;
     isActive = true;
     isFadingIn = true;
+    timeCount = 0;
+    logoAlpha = 0;
 }
 
 void Splash::onDeactivate()
 {
-    std::cout << "DEACTIVE" <<std::endl;
     isActive = false;
     isFadingIn = false;
     isOnPause = false;

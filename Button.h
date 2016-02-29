@@ -13,13 +13,11 @@ private:
     sf::Text label;
     sf::Vector2f center;
     sf::Vector2f half_diagonal;
+    sf::RectangleShape drop;
 public:
-    Button();
+    Button(sf::Vector2f center, sf::Vector2f half_diagonal, std::string content);
     bool checkCollision(float, float);
     void draw(sf::RenderWindow&) const;
-    void setPosition(float, float);
-    void setDimension(float, float);
-    void setContent(std::string);
 };
 
 #endif // BUTTON_H_INCLUDED

@@ -4,20 +4,13 @@
 #include <iostream>
 
 
-MenuState::MenuState(StateManager *sm){
-
-    join.setContent("Join Game");
-    join.setPosition(window_width/2 - 10, window_height/2 + 100);
-    join.setDimension(200, 40);
-
-    host.setContent("Host Game");
-    host.setPosition(window_width/2 - 10, window_height/2 + 150);
-    host.setDimension(200, 40);
-
-    options.setContent("Options");
-    options.setPosition(window_width/2 - 10, window_height/2 + 200);
-    options.setDimension(200, 40);
-
+MenuState::MenuState(StateManager *sm):
+sm(sm),
+join(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 50), sf::Vector2f(100, 20), "Join Game")),
+host(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 100), sf::Vector2f(100, 20), "Host Game")),
+options(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 150), sf::Vector2f(100, 20), "Options")),
+exit(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 200), sf::Vector2f(100, 20), "Exit"))
+{
     cover = 255;
 }
 
@@ -30,26 +23,22 @@ void MenuState::update(float dt)
 
 void MenuState::handleInput(int u, int v)
 {
-    if(cover>0)
-    {
+    bool leftClick = sf::Mouse::isButtonPressed(sf::Mouse::Left);
+    if(leftClick && cover > 0) {
         cover = 0;
-        std::cout<<"NADA"<<std::endl;
         return;
     }
-    else if(join.checkCollision(u, v))
-    {
-        std::cout<<"JOIN"<<std::endl;
-        std::cout<<sf::Mouse::getPosition().y<<std::endl;
+    if(join.checkCollision(u, v) && leftClick){
+
     }
-    else if(host.checkCollision(u, v))
-    {
-        std::cout<<"HOST"<<std::endl;
-        std::cout<<sf::Mouse::getPosition().y<<std::endl;
+    if(host.checkCollision(u, v) && leftClick) {
+
     }
-    else if(options.checkCollision(u, v))
-    {
-        std::cout<<"OPTIONS"<<std::endl;
-        std::cout<<sf::Mouse::getPosition().y<<std::endl;
+    if(options.checkCollision(u, v) && leftClick) {
+
+    }
+    if(exit.checkCollision(u, v) && leftClick) {
+
     }
 }
 
@@ -58,6 +47,7 @@ void MenuState::draw(sf::RenderWindow &window) const
     join.draw(window);
     host.draw(window);
     options.draw(window);
+    exit.draw(window);
 
     if(cover==0) return;
     sf::Vector2f curtainSize(800, 600);

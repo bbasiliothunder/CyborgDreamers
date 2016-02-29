@@ -1,58 +1,63 @@
 # depslib dependency file v1.0
-1456188130 source:c:\users\aemiel\documents\github\cyborgdreamers\runner.cpp
+1456681212 source:c:\users\aemiel\documents\github\cyborgdreamers\runner.cpp
 	"StateManager.h"
 	"StateSubclass.h"
+	"Universal.h"
 
-1456169464 c:\users\aemiel\documents\github\cyborgdreamers\statemanager.h
+1456681212 c:\users\aemiel\documents\github\cyborgdreamers\statemanager.h
 	<vector>
+	<iostream>
 	"State.h"
 
-1456169464 c:\users\aemiel\documents\github\cyborgdreamers\state.h
+1456681212 c:\users\aemiel\documents\github\cyborgdreamers\state.h
 	"Universal.h"
 	<SFML/Graphics.hpp>
 
-1456169464 source:c:\users\aemiel\documents\github\cyborgdreamers\statemanager.cpp
+1456681212 source:c:\users\aemiel\documents\github\cyborgdreamers\statemanager.cpp
 	"StateManager.h"
 
-1456188130 source:c:\users\aemiel\documents\github\cyborgdreamers\teststate.cpp
+1456681205 source:c:\users\aemiel\documents\github\cyborgdreamers\teststate.cpp
 	"State.h"
 
 1456127068 c:\users\aemiel\documents\github\cyborgdreamers\teststate.cpp
 	"State.h"
 	<iostream>
 
-1456169464 c:\users\aemiel\documents\github\cyborgdreamers\universal.h
+1456704389 c:\users\aemiel\documents\github\cyborgdreamers\universal.h
 
-1456188130 source:c:\users\aemiel\documents\github\cyborgdreamers\gamestate.cpp
+1456681212 source:c:\users\aemiel\documents\github\cyborgdreamers\gamestate.cpp
 	"StateSubclass.h"
 	"StateManager.h"
 
-1456184941 c:\users\aemiel\documents\github\cyborgdreamers\statesubclass.h
+1456719268 c:\users\aemiel\documents\github\cyborgdreamers\statesubclass.h
 	"State.h"
 	"EntitySubclass.h"
 	"Map.h"
+	"Button.h"
+	<vector>
+	"SFML/Graphics.hpp"
 	<vector>
 
-1456169464 source:c:\users\aemiel\documents\github\cyborgdreamers\state.cpp
+1456681205 source:c:\users\aemiel\documents\github\cyborgdreamers\state.cpp
 	"StateManager.h"
 	<cassert>
 
-1456187443 c:\users\aemiel\documents\github\cyborgdreamers\entity.h
+1456681205 c:\users\aemiel\documents\github\cyborgdreamers\entity.h
 	<SFML/Graphics.hpp>
 
-1456188130 source:c:\users\aemiel\documents\github\cyborgdreamers\character.cpp
+1456681205 source:c:\users\aemiel\documents\github\cyborgdreamers\character.cpp
 	"EntitySubclass.h"
 	<SFML/Graphics.hpp>
 
-1456187844 c:\users\aemiel\documents\github\cyborgdreamers\entitysubclass.h
+1456681205 c:\users\aemiel\documents\github\cyborgdreamers\entitysubclass.h
 	"Entity.h"
 
-1456188130 source:c:\users\aemiel\documents\github\cyborgdreamers\map.cpp
+1456681205 source:c:\users\aemiel\documents\github\cyborgdreamers\map.cpp
 	"Map.h"
 	<fstream>
 	<cctype>
 
-1456186761 c:\users\aemiel\documents\github\cyborgdreamers\map.h
+1456681205 c:\users\aemiel\documents\github\cyborgdreamers\map.h
 	<SFML/Graphics.hpp>
 
 1456186761 D
@@ -207,6 +212,29 @@
 	<iostream>
 
 1456585129 source:c:\users\lenovox230\desktop\school\college\third year\second sem\cs179.14b\new\splash.cpp
+	<SFML/Graphics.hpp>
+	<algorithm>
+	<iostream>
+	"StateManager.h"
+	"StateSubclass.h"
+
+1456719703 source:c:\users\aemiel\documents\github\cyborgdreamers\button.cpp
+	<SFML/Graphics.hpp>
+	"Button.h"
+	"Universal.h"
+	<stdlib.h>
+	<iostream>
+
+1456706415 c:\users\aemiel\documents\github\cyborgdreamers\button.h
+	<SFML/Graphics.hpp>
+
+1456719671 source:c:\users\aemiel\documents\github\cyborgdreamers\menustate.cpp
+	"Universal.h"
+	"StateSubclass.h"
+	"StateManager.h"
+	<iostream>
+
+1456704349 source:c:\users\aemiel\documents\github\cyborgdreamers\splash.cpp
 	<SFML/Graphics.hpp>
 	<algorithm>
 	<iostream>

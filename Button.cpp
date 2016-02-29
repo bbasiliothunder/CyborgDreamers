@@ -4,37 +4,28 @@
 #include <stdlib.h>
 #include <iostream>
 
-Button::Button()
+Button::Button(sf::Vector2f center, sf::Vector2f half_diagonal, std::string content): center(center), half_diagonal(half_diagonal), content(content)
 {
     font.loadFromFile("assets/fonts/black_jack.ttf");
-}
+    label = sf::Text(content, font);
+    drop.setOrigin(half_diagonal);
+    sf::Vector2f diagonal(half_diagonal.x*2, half_diagonal.y*2);
+    drop.setSize(diagonal);
+    drop.setPosition(center);
 
-float clamp(float var, float mini, float maxi)
-{
-    if(var < mini) return mini;
-    else if( var > maxi) return maxi;
-    return var;
+    label.setString(content);
+    unsigned int font_size = (unsigned int)(half_diagonal.y*2*0.75);
+    label.setCharacterSize(font_size);
+    label.setOrigin(label.getLocalBounds().width/2, font_size/2.0);
+    label.setPosition(center);
+    hover = false;
 }
 
 bool Button::checkCollision(float u, float v)
 {
     float targetX = clamp(u, center.x-half_diagonal.x, center.x+half_diagonal.x);
-    float targetY = clamp(v, center.x-half_diagonal.y, center.y+half_diagonal.y);
+    float targetY = clamp(v, center.y-half_diagonal.y, center.y+half_diagonal.y);
     hover = (targetX==u && targetY==v);
-    return hover;
-}
-
-void Button::draw(sf::RenderWindow& window) const
-{
-    float drawPosX = center.x-half_diagonal.x;
-    float drawPosY = center.y-half_diagonal.y;
-    float width = half_diagonal.x*2;
-    float height = half_diagonal.y*2;
-    unsigned int fontSize = (unsigned int)(height*0.75);
-    sf::RectangleShape drop;
-    drop.setSize(sf::Vector2f(width, height));
-    sf::Text label(content, font, fontSize);
-
     if(hover)
     {
         label.setColor(sf::Color::Black);
@@ -45,23 +36,11 @@ void Button::draw(sf::RenderWindow& window) const
         label.setColor(sf::Color::White);
         drop.setFillColor(sf::Color(0,0,0,0));
     }
-    drop.setPosition(drawPosX, drawPosY);
-    label.setPosition(drawPosX+3, drawPosY+3);
+    return hover;
+}
+
+void Button::draw(sf::RenderWindow& window) const
+{
     window.draw(drop);
     window.draw(label);
-}
-
-void Button::setPosition(float u, float v)
-{
-    center = sf::Vector2f(u, v);
-}
-
-void Button::setDimension(float u, float v)
-{
-    half_diagonal = sf::Vector2f(u/2.0, v/2.0);
-}
-
-void Button::setContent(const std::string cont)
-{
-    content = cont;
 }
