@@ -5,16 +5,12 @@ void StateManager::addState(State* state) {
 }
 
 void StateManager::push(unsigned int id, std::string pass) {
-    std::cout << "push" <<std::endl;
     if(!state_stack.empty())
     {
-        std::cout << "DEACTA" <<std::endl;
        state_stack.back()->onDeactivate();
     }
 
-    std::cout << "DEACT1" <<std::endl;
     state_stack.push_back(states[id]);
-    std::cout << "DEACT2" <<std::endl;
     state_stack.back()->onActivate(pass);
 }
 

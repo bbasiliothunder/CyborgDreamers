@@ -2,6 +2,7 @@
 #include "StateSubclass.h"
 #include "StateManager.h"
 #include <iostream>
+#include <cstdlib>
 
 
 MenuState::MenuState(StateManager *sm):
@@ -29,7 +30,7 @@ void MenuState::handleInput(int u, int v)
         return;
     }
     if(join.checkCollision(u, v) && leftClick){
-
+        sm->push(2);
     }
     if(host.checkCollision(u, v) && leftClick) {
 
@@ -38,7 +39,7 @@ void MenuState::handleInput(int u, int v)
 
     }
     if(exit.checkCollision(u, v) && leftClick) {
-
+        std::exit(0);
     }
 }
 

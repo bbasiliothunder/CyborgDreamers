@@ -4,11 +4,12 @@
 
 int main() {
     StateManager sm;
-    Splash s(&sm);
+    Splash s(&sm); // 0
+    MenuState ms(&sm); // 1
+    GameState gs(&sm); // 2
+
     sm.addState(&s);
-    MenuState ms(&sm);
     sm.addState(&ms);
-    GameState gs(&sm);
     sm.addState(&gs);
     sm.push(0);
     sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift", sf::Style::Close);
