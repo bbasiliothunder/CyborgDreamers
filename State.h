@@ -1,7 +1,8 @@
 #ifndef STATE_H_INCLUDED
 #define STATE_H_INCLUDED
 #include "Universal.h"
-#include<SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
+#include <iostream>
 
 class StateManager;
 class State {
@@ -11,6 +12,7 @@ protected:
     bool isActive;
     void popSelf(unsigned int level=0, std::string pass="");
 public:
+    State(StateManager* sm): sm(sm) {}
     virtual void onActivate(std::string accept) {
         isActive = true;
     }

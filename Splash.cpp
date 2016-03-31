@@ -4,7 +4,9 @@
 #include "StateManager.h"
 #include "Splash.h"
 
-Splash::Splash(StateManager* sm)
+Splash::Splash(StateManager* sm):
+State(sm),
+sm(sm)
 {
     this->sm = sm;
     isFadingIn = false;

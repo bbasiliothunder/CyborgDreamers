@@ -4,7 +4,7 @@ class TestState: public State {
     sf::CircleShape character;
     float x, y, xDisp, yDisp;
 public:
-    TestState() {
+    TestState(): State(sm) {
         character.setRadius(30);
         character.setOrigin(15, 15);
         character.setFillColor(sf::Color::Red);

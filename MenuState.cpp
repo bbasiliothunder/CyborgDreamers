@@ -6,6 +6,7 @@
 
 
 MenuState::MenuState(StateManager *sm):
+State(sm),
 sm(sm),
 join(Button(sf::Vector2f(Universal::window_width/2.0, Universal::window_height/2.0 + 50), sf::Vector2f(100, 20), "Join Game")),
 host(Button(sf::Vector2f(Universal::window_width/2.0, Universal::window_height/2.0 + 100), sf::Vector2f(100, 20), "Host Game")),

@@ -1,7 +1,8 @@
 #include "StateManager.h"
 #include "GameState.h"
 
-GameState::GameState(StateManager* sm): sm(sm){
+GameState::GameState(StateManager* sm): State(sm), sm(sm){
+}
 
 }
 void GameState::handleInput(int u, int v) {

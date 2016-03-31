@@ -17,6 +17,7 @@ void StateManager::push(unsigned int id, std::string pass) {
 void StateManager::pop(unsigned int lvl, std::string pass) {
     if(state_stack.empty()) return;
     state_stack.back()->onDeactivate();
+    state_stack.pop_back();
 
     unsigned int count = lvl-1;
     while(!state_stack.empty() && count-->0) {
