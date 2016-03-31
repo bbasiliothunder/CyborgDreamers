@@ -1,8 +1,6 @@
 #ifndef STATESUBCLASS_H_INCLUDED
 #define STATESUBCLASS_H_INCLUDED
 #include "State.h"
-#include "EntitySubclass.h"
-#include "Map.h"
 #include "Button.h"
 #include <vector>
 #include "SFML/Graphics.hpp"
@@ -10,10 +8,7 @@
 
 class GameState: public State {
 private:
-    Map map;
     StateManager* sm;
-    bool isActive;
-    Character player;
 public:
     GameState(StateManager* sm);
     void handleInput(int u, int v);
