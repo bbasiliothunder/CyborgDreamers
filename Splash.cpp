@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <iostream>
 #include "StateManager.h"
-#include "StateSubclass.h"
+#include "Splash.h"
 
 Splash::Splash(StateManager* sm)
 {
