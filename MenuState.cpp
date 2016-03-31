@@ -31,10 +31,10 @@ void MenuState::handleInput(int u, int v)
         return;
     }
     if(join.checkCollision(u, v) && leftClick){
-        sm->push(2);
+        sm->push(2, "client");
     }
     if(host.checkCollision(u, v) && leftClick) {
-
+        sm->push(2, "host");
     }
     if(options.checkCollision(u, v) && leftClick) {
 
