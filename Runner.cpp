@@ -14,7 +14,7 @@ int main() {
     sm.addState(&ms);
     sm.addState(&gs);
     sm.push(0);
-    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift", sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(Universal::window_width, Universal::window_height), "G-Shift", sf::Style::Close);
     sf::Clock clock;
     float lag = 0;
     while(window.isOpen())
@@ -25,19 +25,19 @@ int main() {
                 window.close();
         }
         sm.handleInput(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y);
-        sm.update(spf);
+        sm.update(Universal::spf);
 
         window.clear(sf::Color::Black);
         sm.draw(window);
         window.display();
 
         float timePassed = lag+clock.getElapsedTime().asSeconds();
-        if(timePassed<spf) {
-            float extra = spf-timePassed;
+        if(timePassed<Universal::spf) {
+            float extra = Universal::spf-timePassed;
             sf::sleep(sf::seconds(extra));
             lag = 0;
         } else {
-            lag = timePassed-spf;
+            lag = timePassed-Universal::spf;
         }
         clock.restart();
     }

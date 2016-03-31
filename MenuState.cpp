@@ -7,10 +7,10 @@
 
 MenuState::MenuState(StateManager *sm):
 sm(sm),
-join(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 50), sf::Vector2f(100, 20), "Join Game")),
-host(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 100), sf::Vector2f(100, 20), "Host Game")),
-options(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 150), sf::Vector2f(100, 20), "Options")),
-exit(Button(sf::Vector2f(window_width/2.0, window_height/2.0 + 200), sf::Vector2f(100, 20), "Exit"))
+join(Button(sf::Vector2f(Universal::window_width/2.0, Universal::window_height/2.0 + 50), sf::Vector2f(100, 20), "Join Game")),
+host(Button(sf::Vector2f(Universal::window_width/2.0, Universal::window_height/2.0 + 100), sf::Vector2f(100, 20), "Host Game")),
+options(Button(sf::Vector2f(Universal::window_width/2.0, Universal::window_height/2.0 + 150), sf::Vector2f(100, 20), "Options")),
+exit(Button(sf::Vector2f(Universal::window_width/2.0, Universal::window_height/2.0 + 200), sf::Vector2f(100, 20), "Exit"))
 {
     cover = 255;
 }

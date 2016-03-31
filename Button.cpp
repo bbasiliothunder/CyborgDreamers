@@ -23,8 +23,8 @@ Button::Button(sf::Vector2f center, sf::Vector2f half_diagonal, std::string cont
 
 bool Button::checkCollision(float u, float v)
 {
-    float targetX = clamp(u, center.x-half_diagonal.x, center.x+half_diagonal.x);
-    float targetY = clamp(v, center.y-half_diagonal.y, center.y+half_diagonal.y);
+    float targetX = Universal::clamp(u, center.x-half_diagonal.x, center.x+half_diagonal.x);
+    float targetY = Universal::clamp(v, center.y-half_diagonal.y, center.y+half_diagonal.y);
     hover = (targetX==u && targetY==v);
     if(hover)
     {
