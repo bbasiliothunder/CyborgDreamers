@@ -13,7 +13,6 @@ private:
     Button options;
     Button exit;
     int cover;
-    sf::RenderWindow window2;
 public:
     MenuState(StateManager* sm);
     void handleInput(int u, int v, const std::string& typed);
