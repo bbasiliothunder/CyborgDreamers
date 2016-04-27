@@ -23,7 +23,7 @@ void MenuState::update(float dt)
     cover = std::max(temp, 0);
 }
 
-void MenuState::handleInput(int u, int v)
+void MenuState::handleInput(int u, int v, const std::string& typed)
 {
     bool leftClick = sf::Mouse::isButtonPressed(sf::Mouse::Left);
     if(leftClick && cover > 0) {

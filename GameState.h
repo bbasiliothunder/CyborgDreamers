@@ -14,7 +14,7 @@ public:
     void clientLoop();
     void onActivate(std::string accept);
     void onDeactivate();
-    void handleInput(int u, int v);
+    void handleInput(int u, int v, const std::string& typed);
     void update(float dt);
     void draw(sf::RenderWindow& window) const;
 };

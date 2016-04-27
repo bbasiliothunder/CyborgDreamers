@@ -20,11 +20,16 @@ int main() {
     while(window.isOpen())
     {
         sf::Event e;
+        std::string typed = "";
         while(window.pollEvent(e)) {
             if(e.type==sf::Event::Closed)
                 window.close();
+            else if(e.type==sf::Event::TextEntered && e.text.unicode<128) {
+                typed += static_cast<char>(e.text.unicode);
+            }
         }
-        sm.handleInput(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y);
+
+        sm.handleInput(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y, typed);
         sm.update(Universal::spf);
 
         window.clear(sf::Color::Black);

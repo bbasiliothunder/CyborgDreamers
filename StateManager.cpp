@@ -30,7 +30,7 @@ void StateManager::pop(unsigned int lvl, std::string pass) {
     }
 }
 
-void StateManager::handleInput(int u, int v) {
+void StateManager::handleInput(int u, int v, const std::string& typed) {
     if(state_stack.empty()) return;
     state_stack.back()->handleInput(u, v);
 }

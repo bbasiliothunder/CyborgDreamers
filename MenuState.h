@@ -16,7 +16,7 @@ private:
     sf::RenderWindow window2;
 public:
     MenuState(StateManager* sm);
-    void handleInput(int u, int v);
+    void handleInput(int u, int v, const std::string& typed);
     void update(float dt);
     void draw(sf::RenderWindow& window) const;
 };

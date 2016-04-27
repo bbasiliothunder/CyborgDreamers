@@ -43,7 +43,7 @@ void GameState::onDeactivate() {
     }
 }
 
-void GameState::handleInput(int u, int v) {
+void GameState::handleInput(int u, int v, const std::string& typed) {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
         popSelf(1);
     }

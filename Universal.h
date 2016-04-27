@@ -1,5 +1,6 @@
 #ifndef UNIVERSAL_H_INCLUDED
 #define UNIVERSAL_H_INCLUDED
+#include <string>
 
 struct Universal {
     static constexpr int window_width = 800;
@@ -12,6 +13,20 @@ struct Universal {
         if(var < mini) return mini;
         else if( var > maxi) return maxi;
         return var;
+    }
+
+    static void appendTextInput(std::string& base, const std::string& append)
+    {
+        for(int i=0; i<append.length(); i++)
+        {
+            if(append[i]!='\n' && (int)append[i]!=13)
+            {
+                if(append[i]!='\b')
+                    base += append[i];
+                else if(base.length()>0)
+                    base = base.substr(0, base.length()-1);
+            }
+        }
     }
 };
 
