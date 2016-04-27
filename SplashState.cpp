@@ -2,9 +2,9 @@
 #include <algorithm>
 #include <iostream>
 #include "StateManager.h"
-#include "Splash.h"
+#include "SplashState.h"
 
-Splash::Splash(StateManager* sm):
+SplashState::SplashState(StateManager* sm):
 State(sm),
 sm(sm)
 {
@@ -14,7 +14,7 @@ sm(sm)
     isFadingOut = false;
 }
 
-void Splash::update(float dt)
+void SplashState::update(float dt)
 {
     if(isFadingIn || isFadingOut || isOnPause)
         timeCount += dt;
@@ -61,7 +61,7 @@ void Splash::update(float dt)
     }
 }
 
-void Splash::draw(sf::RenderWindow& window) const
+void SplashState::draw(sf::RenderWindow& window) const
 {
     sf::Texture splash_logo;
     splash_logo.loadFromFile("assets/sprites/chandelier-logo.png", sf::IntRect(0, 0, 0, 0));
@@ -73,7 +73,7 @@ void Splash::draw(sf::RenderWindow& window) const
     window.draw(splash_sprite);
 }
 
-void Splash::onActivate(std::string accept)
+void SplashState::onActivate(const std::string& accept)
 {
     isActive = true;
     isFadingIn = true;
@@ -81,7 +81,7 @@ void Splash::onActivate(std::string accept)
     logoAlpha = 0;
 }
 
-void Splash::onDeactivate()
+void SplashState::onDeactivate()
 {
     isActive = false;
     isFadingIn = false;
@@ -91,7 +91,7 @@ void Splash::onDeactivate()
     logoAlpha = 0;
 }
 
-void Splash::handleInput(int u, int v)
+void SplashState::handleInput(int u, int v, const std::string& typed)
 {
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
     {

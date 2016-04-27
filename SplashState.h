@@ -1,7 +1,8 @@
 #ifndef SPLASH_H_INCLUDED
 #define SPLASH_H_INCLUDED
 
-class Splash: public State
+class StateManager;
+class SplashState: public State
 {
 private:
     StateManager* sm;
@@ -11,12 +12,12 @@ private:
     float timeCount;
     int logoAlpha;
 public:
-    Splash(StateManager* sm);
+    SplashState(StateManager* sm);
     void update(float dt);
     void draw(sf::RenderWindow&) const;
-    void onActivate(std::string accept);
+    void onActivate(const std::string& accept);
     void onDeactivate();
-    void handleInput(int u, int v);
+    void handleInput(int u, int v, const std::string& typed);
 };
 
 #endif // SPLASH_H_INCLUDED

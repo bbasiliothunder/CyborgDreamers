@@ -1,5 +1,5 @@
 #include "StateManager.h"
-#include "Splash.h"
+#include "SplashState.h"
 #include "MenuState.h"
 #include "GameState.h"
 #include "Universal.h"
