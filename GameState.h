@@ -12,7 +12,7 @@ public:
     GameState(StateManager* sm);
     void serverLoop();
     void clientLoop();
-    void onActivate(std::string accept);
+    void onActivate(const std::string& accept);
     void onDeactivate();
     void handleInput(int u, int v, const std::string& typed);
     void update(float dt);

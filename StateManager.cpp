@@ -14,7 +14,7 @@ void StateManager::push(unsigned int id, std::string pass) {
     state_stack.back()->onActivate(pass);
 }
 
-void StateManager::pop(unsigned int lvl, std::string pass) {
+void StateManager::pop(unsigned int lvl, const std::string& pass) {
     if(state_stack.empty()) return;
     state_stack.back()->onDeactivate();
     state_stack.pop_back();
@@ -32,7 +32,7 @@ void StateManager::pop(unsigned int lvl, std::string pass) {
 
 void StateManager::handleInput(int u, int v, const std::string& typed) {
     if(state_stack.empty()) return;
-    state_stack.back()->handleInput(u, v);
+    state_stack.back()->handleInput(u, v, typed);
 }
 
 void StateManager::update(float dt) {

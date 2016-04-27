@@ -18,7 +18,7 @@ void GameState::clientLoop() {
     std::cout << "sayonara\n";
 }
 
-void GameState::onActivate(std::string activate) {
+void GameState::onActivate(const std::string& activate) {
     isActive = true;
     isHost = false;
     if(activate=="host") {

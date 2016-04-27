@@ -11,9 +11,8 @@ private:
 public:
     StateManager() {}
     void addState(State* state);
-    void push(unsigned int id, std::string pass="");
-    void pop(unsigned int lvl=1, std::string pass="");
-    void handleInput(int u, int v);
+    void push(unsigned int id, const std::string& pass="");
+    void pop(unsigned int lvl=1, const std::string& pass="");
     void handleInput(int u, int v, const std::string& typed);
     void update(float dt);
     void draw(sf::RenderWindow& window) const;

@@ -10,10 +10,10 @@ protected:
     friend class StateManager;
     StateManager* sm;
     bool isActive;
-    void popSelf(unsigned int level=0, std::string pass="");
+    void popSelf(unsigned int level=0, const std::string& pass="");
 public:
     State(StateManager* sm): sm(sm) {}
-    virtual void onActivate(std::string accept) {
+    virtual void onActivate(const std::string& accept) {
         isActive = true;
     }
     virtual void onDeactivate() {
