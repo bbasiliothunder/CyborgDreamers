@@ -12,6 +12,7 @@ Button::Button(sf::Vector2f center, sf::Vector2f half_diagonal, std::string cont
     sf::Vector2f diagonal(half_diagonal.x*2, half_diagonal.y*2);
     drop.setSize(diagonal);
     drop.setPosition(center);
+    drop.setFillColor(sf::Color::Black);
 
     label.setString(content);
     unsigned int font_size = (unsigned int)(half_diagonal.y*2*0.75);
