@@ -2,19 +2,22 @@
 #include "SplashState.h"
 #include "MenuState.h"
 #include "JoinState.h"
+#include "HostState.h"
 #include "GameState.h"
 #include "Universal.h"
 
 int main() {
     StateManager sm;
-    Splash s(&sm); // 0
-    MenuState ms(&sm); // 1
-    GameState gs(&sm); // 2
+    SplashState s(&sm); // 0
+    MenuState ms(&sm);  // 1
     JoinState js(&sm);  // 2
+    HostState hs(&sm);  // 3
+    GameState gs(&sm);  // 4
 
     sm.addState(&s);
     sm.addState(&ms);
     sm.addState(&js);
+    sm.addState(&hs);
     sm.addState(&gs);
     sm.push(0);
     sf::RenderWindow window(sf::VideoMode(Universal::window_width, Universal::window_height), "G-Shift", sf::Style::Close);

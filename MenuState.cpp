@@ -34,7 +34,7 @@ void MenuState::handleInput(int u, int v, const std::string& typed)
         sm->push(2, "");
     }
     if(host.checkCollision(u, v) && leftClick) {
-        sm->push(2, "host");
+        sm->push(3, "");
     }
     if(options.checkCollision(u, v) && leftClick) {
 
