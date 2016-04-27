@@ -4,7 +4,7 @@ void StateManager::addState(State* state) {
     states.push_back(state);
 }
 
-void StateManager::push(unsigned int id, std::string pass) {
+void StateManager::push(unsigned int id, const std::string& pass) {
     if(!state_stack.empty())
     {
        state_stack.back()->onDeactivate();
