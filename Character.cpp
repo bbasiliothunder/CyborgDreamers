@@ -62,6 +62,11 @@ void Character::draw(sf::RenderWindow& window) const {
     window.draw(toRender);
 }
 
+Movement Character::getDirection()
+{
+    return this->direction;
+}
+
 sf::Vector2i Character::getIndexPosition() {
     int x = (int)floor(position.x);
     int y = (int)floor(position.y);
