@@ -17,7 +17,11 @@ public:
     void draw(sf::RenderWindow& window) const;
     void setDirection(Movement m);
     void setFace(Movement m);
+    Movement getDirection();
     sf::Vector2i getIndexPosition();
 };
+
+
+
 
 #endif // ENTITYSUBCLASS_H_INCLUDED
