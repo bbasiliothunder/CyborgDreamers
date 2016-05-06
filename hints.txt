@@ -1,0 +1,11 @@
+There was an odd-looking character, the name's <playerName>, running around in room <roomNumber>.
+
+Don't you admire the jewel in room <roomNumber>? <playerName> agrees it's magnificent!
+
+Have you met <playerName>? Great individual hanging out in room <roomNumber>.
+
+<playerName> was so rude! I expect an apology for causing me trouble when I was in room <roomNumber>.
+
+A gemologist I met at room <roomNumber>, <playerName>, had a lot to say about the jewel.
+
+Do they screen their guests? <playerName> was causing a ruckus in room <roomNumber>, such a disgrace!
