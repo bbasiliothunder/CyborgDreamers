@@ -1,15 +1,23 @@
 #ifndef MAP_H_INCLUDED
 #define MAP_H_INCLUDED
-#include <SFML/Graphics.hpp>
+
+#include "Tile.h"
+#include "SFML/Graphics/RenderWindow.hpp"
+#include <vector>
+
 class Map {
-private:
-    sf::Texture tileTexture;
-    sf::Vector2i map[100][100];
-    sf::Vector2i limit;
-public:
-    Map(std::string s);
-    void draw(sf::RenderWindow& window) const;
-    sf::Vector2i getTile(sf::Vector2i pos);
+	private:
+		int width, height;
+		std::vector< std::vector<Tile*> > tiles;
+
+	public:
+		Map(int w = 0, int h = 0);
+		Tile* getTile(int row, int column);
+		void drawTiles(sf::RenderWindow* window);
+		uint8_t** printTiles();
+		int getWidth();
+		int getHeight();
 };
+
 
 #endif // MAP_H_INCLUDED

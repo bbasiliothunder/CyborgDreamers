@@ -1,62 +1,91 @@
 #include "Map.h"
-#include <fstream>
-#include <cctype>
+#include <iostream>
+Map::Map(int w, int h)
+{
+    this->width = w;
+    this->height = h;
 
-Map::Map(std::string s) {
-    tileTexture.loadFromFile("assets/sprites/tiles.png");
-    std::ifstream reader("assets/maps/" + s + ".map");
-    sf::Vector2i readCounter(0, 0);
-    if(reader.is_open()) {
-        std::string tileLocation;
-        reader >> tileLocation;
-        tileTexture.loadFromFile(tileLocation);
-        while(!reader.eof())
-        {
-            std::string str;
-            reader >> str;
-            char x = str[0];
-            char y = str[2];
-            if(!std::isdigit(x) || !std::isdigit(y))
-            {
-                map[readCounter.x][readCounter.y] = sf::Vector2i(-1,-1);
-            }
-            else
-            {
-                //-'0' to convert the char x to an integer
-                map[readCounter.x][readCounter.y] = sf::Vector2i(x - '0', y - '0');
-            }
-            if(reader.peek() == '\n')
-            {
-                readCounter.x = 0;
-                readCounter.y++;
-            }
-            else
-            {
-                readCounter.x++;
-            }
-        }
-        readCounter.y++;
-    }
-    limit = readCounter;
-}
-
-void Map::draw(sf::RenderWindow& window) const {
-    sf::Sprite tiles;
-    tiles.setTexture(tileTexture);
-    for(int i = 0; i < limit.x; i++)
+    // Resize the tiles vector according to the width and height of the map.
+    this->tiles.resize(h);
+    for(int i = 0; i < h; i++)
     {
-        for(int j = 0; j < limit.y; j++)
+        this->tiles.at(i).resize(w);
+    }
+
+    // Initialize the tiles in the vector.
+    for(int r = 0; r < this->tiles.size(); r++)
+    {
+        for(int c = 0; c < this->tiles.at(r).size(); c++)
         {
-            if(map[i][j].x != -1 && map[i][j].y != -1)
-            {
-                tiles.setPosition(i * 32, j * 32);
-                tiles.setTextureRect(sf::IntRect(map[i][j].x * 32,  map[i][j].y * 32 , 32 ,32));
-                window.draw(tiles);
-            }
+            this->tiles[r][c] = new Tile(((c * Tile::tileSize) + (Tile::tileSize / 2)), ((r * Tile::tileSize) + (Tile::tileSize / 2)), 1, false);
         }
     }
 }
 
-sf::Vector2i Map::getTile(sf::Vector2i pos) {
-    return map[pos.x][pos.y];
+
+Tile* Map::getTile(int row, int column)
+{
+    if(((row >= 0) && (row < this->height)) && ((column >= 0) && (column < this->width)))
+    {
+        return this->tiles[row][column];
+    }
+
+    else
+    {
+        return NULL;
+    }
+
+}
+
+void Map::drawTiles(sf::RenderWindow* window)
+{
+    for(int r = 0; r < this->height; r++)
+    {
+        for(int c = 0; c < this->width; c++)
+        {
+            this->tiles[r][c]->draw(window);
+        }
+    }
+}
+
+uint8_t** Map::printTiles()
+{
+    uint8_t** passabilitymap;
+    passabilitymap = new uint8_t*[height];
+
+    for(uint8_t i = 0; i<height; i++)
+    {
+        passabilitymap[i] = new uint8_t[width];
+    }
+
+    for(int i = 0; i <height; i++)
+    {
+        for(int j = 0; j < width; j++)
+        {
+
+            passabilitymap[i][j] = tiles[i][j]->getType();
+
+        }
+    }
+
+    for(int i = 0; i <height; i++)
+    {
+        for(int j = 0; j < width; j++)
+        {
+            std::cout<<(int)passabilitymap[i][j];
+        }
+        std::cout<<std::endl;
+    }
+    return passabilitymap;
+
+
+}
+
+int Map::getWidth()
+{
+    return width;
+}
+int Map::getHeight()
+{
+    return height;
 }

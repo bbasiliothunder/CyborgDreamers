@@ -4,10 +4,13 @@
 int main() {
     StateManager sm;
     GameState gs(&sm);
-    sm.addState(&gs);
+    EndState es(&sm);
+     sm.addState(&gs);
+    sm.addState(&es);
     sm.push(0);
 
-    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "G-Shift", sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Jewel Heist", sf::Style::Close);
+
     sf::Clock clock;
     float lag = 0;
     while(window.isOpen())
